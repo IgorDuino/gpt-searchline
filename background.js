@@ -1,11 +1,10 @@
-const targetUrl = 'https://chat.openai.com';
+const targetUrl = 'https://chatgpt.com';
 
 chrome.omnibox.onInputEntered.addListener((text, disposition) => {
     customSearch(text);
 });
 
 function customSearch(query) {
-    // Your custom JavaScript action goes here
     console.log("Searching for:", query);
 
     findOrCreateTab((tab) => {
